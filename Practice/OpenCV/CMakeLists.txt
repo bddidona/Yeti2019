@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)
+project(opencv-test)
+set(execname opencv-test)
+find_package(OpenCV 3.2 REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable(${execname} main.cpp)
+target_link_libraries(${execname} ${OpenCV_LIBS})
